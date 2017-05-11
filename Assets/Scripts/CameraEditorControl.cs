@@ -56,8 +56,8 @@ public class CameraEditorControl : MonoBehaviour
 			float vertical = Input.GetAxis ("Mouse Y") * camSpeed * Time.deltaTime;
 
 			//Rotate the camera accordingly
-			transform.Rotate (0f, horizontal, 0f, Space.World);
-			transform.Rotate (-vertical, 0f, 0f, Space.Self);
+			vrCamera.Rotate (0f, horizontal, 0f, Space.World);
+			vrCamera.Rotate (-vertical, 0f, 0f, Space.Self);
 
 			//If the user presses "escape", unlock the cursor
 			if (Input.GetButtonDown ("Cancel"))
